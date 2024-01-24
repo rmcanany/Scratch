@@ -1,0 +1,61 @@
+﻿'Option Strict On
+
+Imports System.Runtime.InteropServices
+
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim DMApp As DesignManager.Application = Nothing
+        Dim SEDoc As DesignManager.Document = Nothing
+
+        ' Set the Solid Edge file location to be the same as the executable.
+        Dim StartupPath As String = System.Windows.Forms.Application.StartupPath()
+        Dim AssemblyFile As String = String.Format("{0}\project_1_toplevelassy.asm", StartupPath)
+        Dim SearchPath As String = StartupPath
+
+        Dim FileListFromDM As Object = Nothing
+        Dim FilenameList As New List(Of String)
+
+        Dim NumInFiles As Integer
+        Dim NumOutFiles As Integer
+
+        Try
+            DMApp = CType(Activator.CreateInstance(Type.GetTypeFromProgID("DesignManager.Application")), DesignManager.Application)
+            DMApp.DisplayAlerts = CInt(False)
+            DMApp.Visible = True
+
+            ' Open the top level assembly in DesignManager.
+            SEDoc = CType(DMApp.OpenFileInDesignManager(AssemblyFile), DesignManager.Document)
+
+            ' Get the list of files associated with the top level assembly from DesignManager.
+            DMApp.GetFileAndPropertyDataFromGrid(FileListFromDM)
+            NumInFiles = FileListFromDM.getLength(0)
+
+            ' Put the list of files into a List object.
+            For i = 0 To NumInFiles - 1
+                FilenameList.Add(FileListFromDM(i, 0))
+            Next
+
+            ' Set the Where Used Criteria to search for draft files in the specified search path.
+            DMApp.WhereUsedCriteria("*.dft", True) = SearchPath
+
+            ' Perform Where Used on the top level assembly and associated files found by DesignManager.
+            ' Only appears to process the first element of the array.
+            DMApp.PerformWhereUsedinGrid(FilenameList.ToArray)
+
+            ' Get the list of files from DesignManager again.  This time it should include drafts for all files.
+            FileListFromDM = Nothing
+            DMApp.GetFileAndPropertyDataFromGrid(FileListFromDM)
+            NumOutFiles = FileListFromDM.getLength(0)
+
+            ' See how many files were found with Where Used.  Only one is found.
+            Me.Activate()
+            MsgBox(String.Format("Number of draft files found: {0}", NumOutFiles - NumInFiles))
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            SEDoc.Close()
+            DMApp.Quit()
+        End Try
+    End Sub
+End Class
