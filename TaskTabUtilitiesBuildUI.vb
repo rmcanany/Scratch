@@ -100,44 +100,44 @@ Public Class TaskTabUtilitiesBuildUI
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.ImageList = Form1.ImageList1
+                    Button.ImageList = Form_Main.ImageList1
                     Button.ImageKey = "expand.png"
-                    Button.Image = Form1.ImageList1.Images(Button.ImageKey)
+                    Button.Image = Form_Main.ImageList1.Images(Button.ImageKey)
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Select"
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("icons8_Checked_Checkbox_16.png")
+                    Button.Image = Form_Main.ImageList1.Images("icons8_Checked_Checkbox_16.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Assembly"
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("ST9 - asm.png")
+                    Button.Image = Form_Main.ImageList1.Images("ST9 - asm.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Part"
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("ST9 - par.png")
+                    Button.Image = Form_Main.ImageList1.Images("ST9 - par.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Sheetmetal"
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("ST9 - psm.png")
+                    Button.Image = Form_Main.ImageList1.Images("ST9 - psm.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Draft"
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("ST9 - dft.png")
+                    Button.Image = Form_Main.ImageList1.Images("ST9 - dft.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 Case "Task"
@@ -153,8 +153,8 @@ Public Class TaskTabUtilitiesBuildUI
                     Button = New Button
                     Button.Name = String.Format("{0}_Button_{1}", TLPTasks.Name, ColumnName)
                     FormatButton(Button)
-                    Button.Image = Form1.ImageList1.Images("icons8_help_16.png")
-                    'Button.Image = Form1.ImageList1.Images("ST9 - dft.png")
+                    Button.Image = Form_Main.ImageList1.Images("icons8_help_16.png")
+                    'Button.Image = Form_Main.ImageList1.Images("ST9 - dft.png")
                     TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
             End Select
@@ -192,9 +192,9 @@ Public Class TaskTabUtilitiesBuildUI
                             FormatButton(Button)
                             Button.FlatStyle = FlatStyle.Standard
                             Button.FlatAppearance.BorderSize = 1
-                            Button.ImageList = Form1.ImageList1
+                            Button.ImageList = Form_Main.ImageList1
                             Button.ImageKey = "expand.png"
-                            Button.Image = Form1.ImageList1.Images(Button.ImageKey)
+                            Button.Image = Form_Main.ImageList1.Images(Button.ImageKey)
                             TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                         End If
@@ -256,7 +256,7 @@ Public Class TaskTabUtilitiesBuildUI
                         Label = New Label
                         Label.Name = String.Format("{0}_Label_{1}", TaskName, ColumnName)
                         Label.Text = String.Format("       {0}", Tasks(TaskName).LabelText)
-                        Label.ImageList = Form1.ImageList1
+                        Label.ImageList = Form_Main.ImageList1
                         Label.ImageKey = String.Format("{0}.png", TaskName)
                         Label.ImageAlign = ContentAlignment.MiddleLeft
                         Label.Image = Label.ImageList.Images(Label.ImageKey)
@@ -281,7 +281,7 @@ Public Class TaskTabUtilitiesBuildUI
                         Button = New Button
                         Button.Name = String.Format("{0}_Button_{1}", TaskName, ColumnName)
                         FormatButton(Button)
-                        Button.Image = Form1.ImageList1.Images("icons8_help_16.png")
+                        Button.Image = Form_Main.ImageList1.Images("icons8_help_16.png")
                         TLPTasks.Controls.Add(Button, ColumnIndex, RowIndex)
 
                 End Select
@@ -701,80 +701,80 @@ Public Class TaskTabUtilitiesBuildUI
 
         Select Case TaskName
             Case "OpenSave"
-                Image = Form1.ImageList1.Images("OpenSave.png")
+                Image = Form_Main.ImageList1.Images("OpenSave.png")
             Case "ActivateAndUpdateAll"
-                Image = Form1.ImageList1.Images("ActivateAndUpdateAll.png")
+                Image = Form_Main.ImageList1.Images("ActivateAndUpdateAll.png")
             Case "PropertyFindReplace"
-                Image = Form1.ImageList1.Images("PropertyFindReplace.png")
+                Image = Form_Main.ImageList1.Images("PropertyFindReplace.png")
             Case "UpdatePhysicalProperties"
-                Image = Form1.ImageList1.Images("UpdatePhysicalProperties.png")
+                Image = Form_Main.ImageList1.Images("UpdatePhysicalProperties.png")
             Case "VariablesEdit"
-                Image = Form1.ImageList1.Images("VariablesEdit.png")
+                Image = Form_Main.ImageList1.Images("VariablesEdit.png")
             Case "CopyOverallSizeToVariableTable"
-                Image = Form1.ImageList1.Images("CopyOverallSizeToVariableTable.png")
+                Image = Form_Main.ImageList1.Images("CopyOverallSizeToVariableTable.png")
             Case "RemoveFaceStyleOverrides"
-                Image = Form1.ImageList1.Images("RemoveFaceStyleOverrides.png")
+                Image = Form_Main.ImageList1.Images("RemoveFaceStyleOverrides.png")
             Case "UpdateFaceAndViewStylesFromTemplate"
-                Image = Form1.ImageList1.Images("UpdateFaceAndViewStylesFromTemplate.png")
+                Image = Form_Main.ImageList1.Images("UpdateFaceAndViewStylesFromTemplate.png")
             Case "HideConstructions"
-                Image = Form1.ImageList1.Images("HideConstructions.png")
+                Image = Form_Main.ImageList1.Images("HideConstructions.png")
             Case "FitPictorialView"
-                Image = Form1.ImageList1.Images("FitPictorialView.png")
+                Image = Form_Main.ImageList1.Images("FitPictorialView.png")
             Case "PartNumberDoesNotMatchFilename"
-                Image = Form1.ImageList1.Images("PartNumberDoesNotMatchFilename.png")
+                Image = Form_Main.ImageList1.Images("PartNumberDoesNotMatchFilename.png")
             Case "MissingDrawing"
-                Image = Form1.ImageList1.Images("MissingDrawing.png")
+                Image = Form_Main.ImageList1.Images("MissingDrawing.png")
             Case "BrokenLinks"
-                Image = Form1.ImageList1.Images("BrokenLinks.png")
+                Image = Form_Main.ImageList1.Images("BrokenLinks.png")
             Case "LinksOutsideInputDirectory"
-                Image = Form1.ImageList1.Images("LinksOutsideInputDirectory.png")
+                Image = Form_Main.ImageList1.Images("LinksOutsideInputDirectory.png")
             Case "FailedRelationships"
-                Image = Form1.ImageList1.Images("FailedRelationships.png")
+                Image = Form_Main.ImageList1.Images("FailedRelationships.png")
             Case "UnderconstrainedRelationships"
-                Image = Form1.ImageList1.Images("UnderconstrainedRelationships.png")
+                Image = Form_Main.ImageList1.Images("UnderconstrainedRelationships.png")
             Case "CheckInterference"
-                Image = Form1.ImageList1.Images("CheckInterference.png")
+                Image = Form_Main.ImageList1.Images("CheckInterference.png")
             Case "RunExternalProgram"
-                Image = Form1.ImageList1.Images("RunExternalProgram.png")
+                Image = Form_Main.ImageList1.Images("RunExternalProgram.png")
             Case "InteractiveEdit"
-                Image = Form1.ImageList1.Images("InteractiveEdit.png")
+                Image = Form_Main.ImageList1.Images("InteractiveEdit.png")
             Case "SaveAs"
-                Image = Form1.ImageList1.Images("SaveAs.png")
+                Image = Form_Main.ImageList1.Images("SaveAs.png")
             Case "UpdateMaterialFromMaterialTable"
-                Image = Form1.ImageList1.Images("UpdateMaterialFromMaterialTable.png")
+                Image = Form_Main.ImageList1.Images("UpdateMaterialFromMaterialTable.png")
             Case "UpdateInsertPartCopies"
-                Image = Form1.ImageList1.Images("UpdateInsertPartCopies.png")
+                Image = Form_Main.ImageList1.Images("UpdateInsertPartCopies.png")
             Case "FailedOrWarnedFeatures"
-                Image = Form1.ImageList1.Images("FailedOrWarnedFeatures.png")
+                Image = Form_Main.ImageList1.Images("FailedOrWarnedFeatures.png")
             Case "SuppressedOrRolledBackFeatures"
-                Image = Form1.ImageList1.Images("SuppressedOrRolledBackFeatures.png")
+                Image = Form_Main.ImageList1.Images("SuppressedOrRolledBackFeatures.png")
             Case "UnderconstrainedProfiles"
-                Image = Form1.ImageList1.Images("UnderconstrainedProfiles.png")
+                Image = Form_Main.ImageList1.Images("UnderconstrainedProfiles.png")
             Case "InsertPartCopiesOutOfDate"
-                Image = Form1.ImageList1.Images("InsertPartCopiesOutOfDate.png")
+                Image = Form_Main.ImageList1.Images("InsertPartCopiesOutOfDate.png")
             Case "MaterialNotInMaterialTable"
-                Image = Form1.ImageList1.Images("MaterialNotInMaterialTable.png")
+                Image = Form_Main.ImageList1.Images("MaterialNotInMaterialTable.png")
             Case "UpdateDesignForCost"
-                Image = Form1.ImageList1.Images("UpdateDesignForCost.png")
+                Image = Form_Main.ImageList1.Images("UpdateDesignForCost.png")
             Case "FlatPatternMissingOrOutOfDate"
-                Image = Form1.ImageList1.Images("FlatPatternMissingOrOutOfDate.png")
+                Image = Form_Main.ImageList1.Images("FlatPatternMissingOrOutOfDate.png")
             Case "UpdateDrawingViews"
-                Image = Form1.ImageList1.Images("UpdateDrawingViews.png")
+                Image = Form_Main.ImageList1.Images("UpdateDrawingViews.png")
             Case "UpdateStylesFromTemplate"
-                Image = Form1.ImageList1.Images("UpdateStylesFromTemplate.png")
+                Image = Form_Main.ImageList1.Images("UpdateStylesFromTemplate.png")
             Case "UpdateDrawingBorderFromTemplate"
-                Image = Form1.ImageList1.Images("UpdateDrawingBorderFromTemplate.png")
+                Image = Form_Main.ImageList1.Images("UpdateDrawingBorderFromTemplate.png")
             Case "DrawingViewOnBackgroundSheet"
-                Image = Form1.ImageList1.Images("DrawingViewOnBackgroundSheet.png")
+                Image = Form_Main.ImageList1.Images("DrawingViewOnBackgroundSheet.png")
             Case "DrawingViewsOutOfDate"
-                Image = Form1.ImageList1.Images("DrawingViewsOutOfDate.png")
+                Image = Form_Main.ImageList1.Images("DrawingViewsOutOfDate.png")
             Case "DetachedDimensionsOrAnnotations"
-                Image = Form1.ImageList1.Images("DetachedDimensionsOrAnnotations.png")
+                Image = Form_Main.ImageList1.Images("DetachedDimensionsOrAnnotations.png")
             Case "Print"
-                Image = Form1.ImageList1.Images("Print.png")
+                Image = Form_Main.ImageList1.Images("Print.png")
 
             Case Else
-                Image = Form1.ImageList1.Images("Synch_16.png")
+                Image = Form_Main.ImageList1.Images("Synch_16.png")
         End Select
 
         Return Image
@@ -800,9 +800,9 @@ Public Class TaskTabUtilitiesBuildUI
         CheckBox.FlatAppearance.BorderSize = 0
         CheckBox.FlatAppearance.CheckedBackColor = SystemColors.Control
 
-        CheckBox.ImageList = Form1.ImageList1
+        CheckBox.ImageList = Form_Main.ImageList1
         CheckBox.ImageKey = "icons8_unchecked_checkbox_16.png"
-        CheckBox.Image = Form1.ImageList1.Images(CheckBox.ImageKey)
+        CheckBox.Image = Form_Main.ImageList1.Images(CheckBox.ImageKey)
         AddHandler CheckBox.CheckedChanged, AddressOf CheckBox_CheckedChanged
     End Sub
 
@@ -821,10 +821,10 @@ Public Class TaskTabUtilitiesBuildUI
 
         If CheckBox.Checked Then
             CheckBox.ImageKey = "icons8_Checked_Checkbox_16.png"
-            CheckBox.Image = Form1.ImageList1.Images("icons8_Checked_Checkbox_16.png")
+            CheckBox.Image = Form_Main.ImageList1.Images("icons8_Checked_Checkbox_16.png")
         Else
             CheckBox.ImageKey = "icons8_unchecked_checkbox_16.png"
-            CheckBox.Image = Form1.ImageList1.Images("icons8_unchecked_checkbox_16.png")
+            CheckBox.Image = Form_Main.ImageList1.Images("icons8_unchecked_checkbox_16.png")
         End If
 
         If (Not TaskName = "TLPTasks") And (ControlFunction.ToLower = "select") Then
@@ -843,16 +843,16 @@ Public Class TaskTabUtilitiesBuildUI
                     If ShowHideOptionsCheckBox.Checked Then
                         ControlsDict(TLPOptionsName).Visible = False
                         ExpandButton.ImageKey = "expand.png"
-                        ExpandButton.Image = Form1.ImageList1.Images("expand.png")
+                        ExpandButton.Image = Form_Main.ImageList1.Images("expand.png")
                     Else
                         ControlsDict(TLPOptionsName).Visible = True
                         ExpandButton.ImageKey = "collapse.png"
-                        ExpandButton.Image = Form1.ImageList1.Images("collapse.png")
+                        ExpandButton.Image = Form_Main.ImageList1.Images("collapse.png")
                     End If
                 Else
                     ControlsDict(TLPOptionsName).Visible = False
                     ExpandButton.ImageKey = "expand.png"
-                    ExpandButton.Image = Form1.ImageList1.Images("expand.png")
+                    ExpandButton.Image = Form_Main.ImageList1.Images("expand.png")
                 End If
             End If
         End If
@@ -996,10 +996,10 @@ Public Class TaskTabUtilitiesBuildUI
             Button = CType(ControlsDict(ExpandButtonName), Button)
             If Button.ImageKey = "expand.png" Then
                 Button.ImageKey = "collapse.png"
-                Button.Image = Form1.ImageList1.Images("collapse.png")
+                Button.Image = Form_Main.ImageList1.Images("collapse.png")
             Else
                 Button.ImageKey = "expand.png"
-                Button.Image = Form1.ImageList1.Images("expand.png")
+                Button.Image = Form_Main.ImageList1.Images("expand.png")
             End If
         Else
             Dim TLPOptionsName As String = String.Format("{0}_TLP_Options", TaskName)
@@ -1009,11 +1009,11 @@ Public Class TaskTabUtilitiesBuildUI
                 If Show Then
                     ControlsDict(TLPOptionsName).Visible = True
                     Button.ImageKey = "collapse.png"
-                    Button.Image = Form1.ImageList1.Images("collapse.png")
+                    Button.Image = Form_Main.ImageList1.Images("collapse.png")
                 Else
                     ControlsDict(TLPOptionsName).Visible = False
                     Button.ImageKey = "expand.png"
-                    Button.Image = Form1.ImageList1.Images("expand.png")
+                    Button.Image = Form_Main.ImageList1.Images("expand.png")
                 End If
             End If
         End If

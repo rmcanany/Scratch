@@ -499,7 +499,7 @@ Public Class LabelToAction
         AppliesToDraft = True
         HasOptions = False
         HelpURL = GetHelpURL(LabelText)
-        HelpString = "Checks to see if any assembly occurrence is pointing to a file not found on disk."
+        HelpString = "Checks to see if any referenced external file is not found on disk."
         PopulateList(BrokenLinks,
                      TaskName,
                      LabelText,
@@ -522,6 +522,27 @@ Public Class LabelToAction
         HelpURL = GetHelpURL(LabelText)
         HelpString = "Checks to see if any assembly occurrence resides outside the top level directories specified on the **Home Tab**. "
         PopulateList(LinksOutsideInputDirectory,
+                     TaskName,
+                     LabelText,
+                     HelpString,
+                     AppliesToAssembly,
+                     AppliesToPart,
+                     AppliesToSheetmetal,
+                     AppliesToDraft,
+                     HasOptions,
+                     HelpURL:=HelpURL)
+
+        Dim CheckRelationships As New L2A
+        TaskName = "CheckRelationships"
+        LabelText = "Check relationships"
+        AppliesToAssembly = True
+        AppliesToPart = True
+        AppliesToSheetmetal = True
+        AppliesToDraft = False
+        HasOptions = False
+        HelpURL = GetHelpURL(LabelText)
+        HelpString = "Checks if any assembly occurrences have conflicting or otherwise broken relationships."
+        PopulateList(CheckRelationships,
                      TaskName,
                      LabelText,
                      HelpString,

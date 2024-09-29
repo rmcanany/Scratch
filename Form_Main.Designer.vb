@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Form_Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,11 +23,14 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Main))
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPageHome = New System.Windows.Forms.TabPage()
-        Me.TLPTasks = New Scratch.ExTableLayoutPanel()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectPropertyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -76,6 +79,7 @@ Partial Class Form1
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.TabPageHome.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
@@ -98,39 +102,49 @@ Partial Class Form1
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(532, 704)
+        Me.TabControl1.Size = New System.Drawing.Size(532, 317)
         Me.TabControl1.TabIndex = 4
         '
         'TabPageHome
         '
-        Me.TabPageHome.Controls.Add(Me.TLPTasks)
+        Me.TabPageHome.Controls.Add(Me.TextBox5)
+        Me.TabPageHome.Controls.Add(Me.TextBox1)
         Me.TabPageHome.Location = New System.Drawing.Point(4, 25)
         Me.TabPageHome.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TabPageHome.Name = "TabPageHome"
         Me.TabPageHome.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TabPageHome.Size = New System.Drawing.Size(524, 675)
+        Me.TabPageHome.Size = New System.Drawing.Size(524, 288)
         Me.TabPageHome.TabIndex = 0
         Me.TabPageHome.Text = "Home"
         Me.TabPageHome.UseVisualStyleBackColor = True
         '
-        'TLPTasks
+        'TextBox5
         '
-        Me.TLPTasks.AutoScroll = True
-        Me.TLPTasks.AutoSize = True
-        Me.TLPTasks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.TLPTasks.ColumnCount = 2
-        Me.TLPTasks.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLPTasks.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLPTasks.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TLPTasks.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TLPTasks.Location = New System.Drawing.Point(4, 3)
-        Me.TLPTasks.Name = "TLPTasks"
-        Me.TLPTasks.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.TLPTasks.RowCount = 2
-        Me.TLPTasks.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLPTasks.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLPTasks.Size = New System.Drawing.Size(516, 669)
-        Me.TLPTasks.TabIndex = 0
+        Me.TextBox5.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.TextBox5.Location = New System.Drawing.Point(103, 81)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox5.TabIndex = 1
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectPropertyToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 48)
+        '
+        'SelectPropertyToolStripMenuItem
+        '
+        Me.SelectPropertyToolStripMenuItem.Name = "SelectPropertyToolStripMenuItem"
+        Me.SelectPropertyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectPropertyToolStripMenuItem.Text = "Select property"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.TextBox1.Location = New System.Drawing.Point(103, 36)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.TabIndex = 0
         '
         'TabPage2
         '
@@ -177,7 +191,7 @@ Partial Class Form1
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TabPage2.Size = New System.Drawing.Size(524, 675)
+        Me.TabPage2.Size = New System.Drawing.Size(524, 288)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Tasks"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -700,7 +714,7 @@ Partial Class Form1
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TabPage3.Size = New System.Drawing.Size(524, 675)
+        Me.TabPage3.Size = New System.Drawing.Size(524, 288)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Configuration"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -748,20 +762,21 @@ Partial Class Form1
         Me.TabPage5.Text = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Form_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(534, 761)
+        Me.ClientSize = New System.Drawing.Size(534, 377)
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Segoe UI Variable Display", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(550, 800)
-        Me.Name = "Form1"
+        Me.MinimumSize = New System.Drawing.Size(550, 400)
+        Me.Name = "Form_Main"
         Me.Text = "Solid Edge Housekeeper V202?.?"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPageHome.ResumeLayout(False)
         Me.TabPageHome.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -819,5 +834,8 @@ Partial Class Form1
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TLPTasks As ExTableLayoutPanel
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents SelectPropertyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TextBox1 As TextBox
 End Class
